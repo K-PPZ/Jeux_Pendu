@@ -1,0 +1,29 @@
+body {
+    background-color: #FCD315;
+    display: flex;
+}
+
+#container {
+    margin-right: 30px;
+}
+
+#clavier {
+    background-color: #2B80D4;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+#clavier div {
+    background-color: white;
+    padding: 1%;
+    border: solid black 1px;
+}
+
+#SecretWord div {
+    background-color: #1EE193;
+}
+
+img {
+    width: 300px;
+}
