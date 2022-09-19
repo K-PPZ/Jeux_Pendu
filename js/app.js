@@ -8,15 +8,23 @@ let randomWord = Math.floor(Math.random() * (2578 - 0) + 0);
 let randomWordEclater = word[randomWord].split("");
 console.log(word[randomWord].split(""));
 
-let randomNombre = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
-
 for (let i = 0; i < randomWordEclater.length; i++) {
     DivSecretWord = document.getElementById("SecretWord");
     newDiv = document.createElement("div");
     newDiv.setAttribute("id", i);
-    newDiv.textContent = randomWordEclater[randomNombre];
     DivSecretWord.appendChild(newDiv);
 }
+let randomNombre = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
+let randomDiv = document.getElementById(randomNombre);
+randomDiv.textContent = randomWordEclater[randomNombre];
+
+let randomNombre2 = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
+randomDiv = document.getElementById(randomNombre2);
+randomDiv.textContent = randomWordEclater[randomNombre2];
+
+let randomNombre3 = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
+randomDiv = document.getElementById(randomNombre3);
+randomDiv.textContent = randomWordEclater[randomNombre3];
 
 let restart = document.getElementById("restart");
 restart.addEventListener("click", () => {
