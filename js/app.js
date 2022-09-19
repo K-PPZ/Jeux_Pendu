@@ -14,6 +14,7 @@ for (let i = 0; i < randomWordEclater.length; i++) {
     newDiv.setAttribute("id", i);
     DivSecretWord.appendChild(newDiv);
 }
+
 let randomNombre = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
 let randomDiv = document.getElementById(randomNombre);
 randomDiv.textContent = randomWordEclater[randomNombre];
@@ -29,4 +30,68 @@ randomDiv.textContent = randomWordEclater[randomNombre3];
 let restart = document.getElementById("restart");
 restart.addEventListener("click", () => {
     window.location.reload();
+});
+
+
+let A = document.getElementById("A");
+let B = document.getElementById("B");
+let C = document.getElementById("C");
+let D = document.getElementById("D");
+let E = document.getElementById("E");
+let F = document.getElementById("F");
+let G = document.getElementById("G");
+let H = document.getElementById("H");
+let I = document.getElementById("I");
+let J = document.getElementById("J");
+let K = document.getElementById("K");
+let L = document.getElementById("L");
+let M = document.getElementById("M");
+let N = document.getElementById("N");
+let O = document.getElementById("O");
+let P = document.getElementById("P");
+let Q = document.getElementById("Q");
+let R = document.getElementById("R");
+let S = document.getElementById("S");
+let T = document.getElementById("T");
+let U = document.getElementById("U");
+let V = document.getElementById("V");
+let W = document.getElementById("W");
+let X = document.getElementById("X");
+let Y = document.getElementById("Y");
+let Z = document.getElementById("Z");
+
+let img = document.getElementById("img");
+
+A.addEventListener("click", () => {
+    if (randomWordEclater.includes("A") || randomWordEclater.includes("a")) {
+        A.style.backgroundColor = "green";
+    } else {
+        if (img.src="img/pendu_0.jpg") {
+            img.src="img/pendu_1.jpg";
+        } else if (img.src="img/pendu_1.jpg") {
+            img.src="img/pendu_2.jpg";
+        } else if (img.src="img/pendu_2.jpg") {
+            img.src="img/pendu_3.jpg";
+        } else if (img.src="img/pendu_3.jpg") {
+            img.src="img/pendu_4.jpg";
+        }
+        A.style.backgroundColor = "red";
+    }
+});
+
+B.addEventListener("click", () => {
+    if (randomWordEclater.includes("B") || randomWordEclater.includes("b")) {
+        B.style.backgroundColor = "green";
+    } else {
+        if (img.src="img/pendu_0.jpg") {
+            img.src="img/pendu_1.jpg";
+        } else if (img.src="img/pendu_1.jpg") {
+            img.src="img/pendu_2.jpg";
+        } else if (img.src="img/pendu_2.jpg") {
+            img.src="img/pendu_3.jpg";
+        } else if (img.src="img/pendu_3.jpg") {
+            img.src="img/pendu_4.jpg";
+        }
+        B.style.backgroundColor = "red";
+    }
 });
