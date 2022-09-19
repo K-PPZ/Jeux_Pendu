@@ -2,17 +2,22 @@ let word = ["Aaliyah","Aaron","Abby","Abd","Abdallah","Abdel","Abdelaziz","Abdel
 // il y a 2578 mots
 
 
+let DivSecretWord = document.getElementById("SecretWord");
+let newDiv = document.createElement("div");
+let randomWord = Math.floor(Math.random() * (2578 - 0) + 0);
+let randomWordEclater = word[randomWord].split("");
+console.log(word[randomWord].split(""));
+
+for (let i = 0; i < randomWordEclater.length; i++) {
+    DivSecretWord = document.getElementById("SecretWord");
+    newDiv = document.createElement("div");
+    newDiv.textContent = randomWordEclater[i];
+    DivSecretWord.appendChild(newDiv);
+}
+
+
 let restart = document.getElementById("restart");
 
 restart.addEventListener("click", () => {
-    let randomWord = Math.floor(Math.random() * (2578 - 0) + 0);
-    let randomWordEclater = word[randomWord].split("");
-    console.log(word[randomWord].split(""));
-
-    for (let i = 0; i < randomWordEclater.length; i++) {
-        let DivSecretWord = document.getElementById("SecretWord");
-        let newDiv = document.createElement("div");
-        newDiv.textContent = randomWordEclater[i];
-        DivSecretWord.appendChild(newDiv);
-    }
+    window.location.reload();
 });
