@@ -8,12 +8,15 @@ let randomWord = Math.floor(Math.random() * (2578 - 0) + 0);
 let randomWordEclater = word[randomWord].split("");
 console.log(word[randomWord].split(""));
 
+
 for (let i = 0; i < randomWordEclater.length; i++) {
     DivSecretWord = document.getElementById("SecretWord");
     newDiv = document.createElement("div");
     newDiv.setAttribute("id", i);
     DivSecretWord.appendChild(newDiv);
 }
+
+
 
 let randomNombre = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
 let randomDiv = document.getElementById(randomNombre);
@@ -27,38 +30,15 @@ let randomNombre3 = Math.floor(Math.random() * (randomWordEclater.length - 0) + 
 randomDiv = document.getElementById(randomNombre3);
 randomDiv.textContent = randomWordEclater[randomNombre3];
 
+
+
 let restart = document.getElementById("restart");
 restart.addEventListener("click", () => {
     window.location.reload();
 });
 
 
-let A = document.getElementById("A");
-let B = document.getElementById("B");
-let C = document.getElementById("C");
-let D = document.getElementById("D");
-let E = document.getElementById("E");
-let F = document.getElementById("F");
-let G = document.getElementById("G");
-let H = document.getElementById("H");
-let I = document.getElementById("I");
-let J = document.getElementById("J");
-let K = document.getElementById("K");
-let L = document.getElementById("L");
-let M = document.getElementById("M");
-let N = document.getElementById("N");
-let O = document.getElementById("O");
-let P = document.getElementById("P");
-let Q = document.getElementById("Q");
-let R = document.getElementById("R");
-let S = document.getElementById("S");
-let T = document.getElementById("T");
-let U = document.getElementById("U");
-let V = document.getElementById("V");
-let W = document.getElementById("W");
-let X = document.getElementById("X");
-let Y = document.getElementById("Y");
-let Z = document.getElementById("Z");
+
 
 
 
@@ -98,8 +78,36 @@ function ordreImg() {
     } else if (counter == 9) {
         img.src = img9;
         alert("GAME OVER");
+        window.location.reload();
     }
 }
+
+let A = document.getElementById("A");
+let B = document.getElementById("B");
+let C = document.getElementById("C");
+let D = document.getElementById("D");
+let E = document.getElementById("E");
+let F = document.getElementById("F");
+let G = document.getElementById("G");
+let H = document.getElementById("H");
+let I = document.getElementById("I");
+let J = document.getElementById("J");
+let K = document.getElementById("K");
+let L = document.getElementById("L");
+let M = document.getElementById("M");
+let N = document.getElementById("N");
+let O = document.getElementById("O");
+let P = document.getElementById("P");
+let Q = document.getElementById("Q");
+let R = document.getElementById("R");
+let S = document.getElementById("S");
+let T = document.getElementById("T");
+let U = document.getElementById("U");
+let V = document.getElementById("V");
+let W = document.getElementById("W");
+let X = document.getElementById("X");
+let Y = document.getElementById("Y");
+let Z = document.getElementById("Z");
 
 
 A.addEventListener("click", () => {
@@ -129,5 +137,85 @@ C.addEventListener("click", () => {
         counter ++;
         ordreImg();            
         C.style.backgroundColor = "red";
+    }
+});
+
+D.addEventListener("click", () => {
+    if (randomWordEclater.includes("D") || randomWordEclater.includes("d")) {
+        D.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        D.style.backgroundColor = "red";
+    }
+});
+
+E.addEventListener("click", () => {
+    if (randomWordEclater.includes("E") || randomWordEclater.includes("e")) {
+        E.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        E.style.backgroundColor = "red";
+    }
+});
+
+F.addEventListener("click", () => {
+    if (randomWordEclater.includes("F") || randomWordEclater.includes("f")) {
+        F.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        F.style.backgroundColor = "red";
+    }
+});
+
+G.addEventListener("click", () => {
+    if (randomWordEclater.includes("G") || randomWordEclater.includes("g")) {
+        G.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        G.style.backgroundColor = "red";
+    }
+});
+
+H.addEventListener("click", () => {
+    if (randomWordEclater.includes("H") || randomWordEclater.includes("h")) {
+        H.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        H.style.backgroundColor = "red";
+    }
+});
+
+I.addEventListener("click", () => {
+    if (randomWordEclater.includes("I") || randomWordEclater.includes("i")) {
+        I.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        I.style.backgroundColor = "red";
+    }
+});
+
+J.addEventListener("click", () => {
+    if (randomWordEclater.includes("J") || randomWordEclater.includes("j")) {
+        J.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        J.style.backgroundColor = "red";
+    }
+});
+
+K.addEventListener("click", () => {
+    if (randomWordEclater.includes("K") || randomWordEclater.includes("k")) {
+        K.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        K.style.backgroundColor = "red";
     }
 });
