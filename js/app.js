@@ -60,21 +60,54 @@ let X = document.getElementById("X");
 let Y = document.getElementById("Y");
 let Z = document.getElementById("Z");
 
+
+
 let img = document.getElementById("img");
+let img0 = "img/pendu_0.jpg";
+let img1 = "img/pendu_1.jpg";
+let img2 = "img/pendu_2.jpg";
+let img3 = "img/pendu_3.jpg";
+let img4 = "img/pendu_4.jpg";
+let img5 = "img/pendu_5.jpg";
+let img6 = "img/pendu_6.jpg";
+let img7 = "img/pendu_7.jpg";
+let img8 = "img/pendu_8.jpg";
+let img9 = "img/pendu_9.jpg";
+
+
+
+let counter = 0;
+
+function ordreImg() {
+    if (counter == 1) {
+        img.src = img1;
+    } else if (counter == 2) {
+        img.src = img2;
+    } else if (counter == 3) {
+        img.src = img3;
+    } else if (counter == 4) {
+        img.src = img4;
+    } else if (counter == 5) {
+        img.src = img5;
+    } else if (counter == 6) {
+        img.src = img6;
+    } else if (counter == 7) {
+        img.src = img7;
+    } else if (counter == 8) {
+        img.src = img8;
+    } else if (counter == 9) {
+        img.src = img9;
+        alert("GAME OVER");
+    }
+}
+
 
 A.addEventListener("click", () => {
     if (randomWordEclater.includes("A") || randomWordEclater.includes("a")) {
         A.style.backgroundColor = "green";
     } else {
-        if (img.src="img/pendu_0.jpg") {
-            img.src="img/pendu_1.jpg";
-        } else if (img.src="img/pendu_1.jpg") {
-            img.src="img/pendu_2.jpg";
-        } else if (img.src="img/pendu_2.jpg") {
-            img.src="img/pendu_3.jpg";
-        } else if (img.src="img/pendu_3.jpg") {
-            img.src="img/pendu_4.jpg";
-        }
+        counter ++;
+        ordreImg();
         A.style.backgroundColor = "red";
     }
 });
@@ -83,15 +116,18 @@ B.addEventListener("click", () => {
     if (randomWordEclater.includes("B") || randomWordEclater.includes("b")) {
         B.style.backgroundColor = "green";
     } else {
-        if (img.src="img/pendu_0.jpg") {
-            img.src="img/pendu_1.jpg";
-        } else if (img.src="img/pendu_1.jpg") {
-            img.src="img/pendu_2.jpg";
-        } else if (img.src="img/pendu_2.jpg") {
-            img.src="img/pendu_3.jpg";
-        } else if (img.src="img/pendu_3.jpg") {
-            img.src="img/pendu_4.jpg";
-        }
+        counter ++;
+        ordreImg();
         B.style.backgroundColor = "red";
+    }
+});
+
+C.addEventListener("click", () => {
+    if (randomWordEclater.includes("C") || randomWordEclater.includes("c")) {
+        C.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();            
+        C.style.backgroundColor = "red";
     }
 });
