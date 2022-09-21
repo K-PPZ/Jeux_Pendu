@@ -8,12 +8,38 @@ let randomWord = Math.floor(Math.random() * (2578 - 0) + 0);
 let randomWordEclater = word[randomWord].split("");
 console.log(word[randomWord].split(""));
 
+let A = document.getElementById("A");
+let B = document.getElementById("B");
+let C = document.getElementById("C");
+let D = document.getElementById("D");
+let E = document.getElementById("E");
+let F = document.getElementById("F");
+let G = document.getElementById("G");
+let H = document.getElementById("H");
+let I = document.getElementById("I");
+let J = document.getElementById("J");
+let K = document.getElementById("K");
+let L = document.getElementById("L");
+let M = document.getElementById("M");
+let N = document.getElementById("N");
+let O = document.getElementById("O");
+let P = document.getElementById("P");
+let Q = document.getElementById("Q");
+let R = document.getElementById("R");
+let S = document.getElementById("S");
+let T = document.getElementById("T");
+let U = document.getElementById("U");
+let V = document.getElementById("V");
+let W = document.getElementById("W");
+let X = document.getElementById("X");
+let Y = document.getElementById("Y");
+let Z = document.getElementById("Z");
 
 for (let i = 0; i < randomWordEclater.length; i++) {
     DivSecretWord = document.getElementById("SecretWord");
     newDiv = document.createElement("div");
     newDiv.setAttribute("id", i);
-    DivSecretWord.appendChild(newDiv);
+    DivSecretWord.appendChild(newDiv);                
 }
 
 
@@ -36,10 +62,6 @@ let restart = document.getElementById("restart");
 restart.addEventListener("click", () => {
     window.location.reload();
 });
-
-
-
-
 
 
 let img = document.getElementById("img");
@@ -82,32 +104,7 @@ function ordreImg() {
     }
 }
 
-let A = document.getElementById("A");
-let B = document.getElementById("B");
-let C = document.getElementById("C");
-let D = document.getElementById("D");
-let E = document.getElementById("E");
-let F = document.getElementById("F");
-let G = document.getElementById("G");
-let H = document.getElementById("H");
-let I = document.getElementById("I");
-let J = document.getElementById("J");
-let K = document.getElementById("K");
-let L = document.getElementById("L");
-let M = document.getElementById("M");
-let N = document.getElementById("N");
-let O = document.getElementById("O");
-let P = document.getElementById("P");
-let Q = document.getElementById("Q");
-let R = document.getElementById("R");
-let S = document.getElementById("S");
-let T = document.getElementById("T");
-let U = document.getElementById("U");
-let V = document.getElementById("V");
-let W = document.getElementById("W");
-let X = document.getElementById("X");
-let Y = document.getElementById("Y");
-let Z = document.getElementById("Z");
+
 
 
 A.addEventListener("click", () => {
