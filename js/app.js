@@ -9,33 +9,7 @@ let randomWordEclater = word[randomWord].split("");
 console.log(word[randomWord].split(""));
 
 
-let A = document.getElementById("A");
-let B = document.getElementById("B");
-let C = document.getElementById("C");
-let D = document.getElementById("D");
-let E = document.getElementById("E");
-let F = document.getElementById("F");
-let G = document.getElementById("G");
-let H = document.getElementById("H");
-let I = document.getElementById("I");
-let J = document.getElementById("J");
-let K = document.getElementById("K");
-let L = document.getElementById("L");
-let M = document.getElementById("M");
-let N = document.getElementById("N");
-let O = document.getElementById("O");
-let P = document.getElementById("P");
-let Q = document.getElementById("Q");
-let R = document.getElementById("R");
-let S = document.getElementById("S");
-let T = document.getElementById("T");
-let U = document.getElementById("U");
-let V = document.getElementById("V");
-let W = document.getElementById("W");
-let X = document.getElementById("X");
-let Y = document.getElementById("Y");
-let Z = document.getElementById("Z");
-let alphabet = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
+let alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 for (let i = 0; i < randomWordEclater.length; i++) {
     DivSecretWord = document.getElementById("SecretWord");
@@ -66,39 +40,11 @@ restart.addEventListener("click", () => {
 
 
 let img = document.getElementById("img");
-let img0 = "img/pendu_0.jpg";
-let img1 = "img/pendu_1.jpg";
-let img2 = "img/pendu_2.jpg";
-let img3 = "img/pendu_3.jpg";
-let img4 = "img/pendu_4.jpg";
-let img5 = "img/pendu_5.jpg";
-let img6 = "img/pendu_6.jpg";
-let img7 = "img/pendu_7.jpg";
-let img8 = "img/pendu_8.jpg";
-let img9 = "img/pendu_9.jpg";
-
-
 
 let erreurs = 0;
 function ordreImg() {
-    if (erreurs == 1) {
-        img.src = img1;
-    } else if (erreurs == 2) {
-        img.src = img2;
-    } else if (erreurs == 3) {
-        img.src = img3;
-    } else if (erreurs == 4) {
-        img.src = img4;
-    } else if (erreurs == 5) {
-        img.src = img5;
-    } else if (erreurs == 6) {
-        img.src = img6;
-    } else if (erreurs == 7) {
-        img.src = img7;
-    } else if (erreurs == 8) {
-        img.src = img8;
-    } else if (erreurs == 9) {
-        img.src = img9;
+    img.src = "img/pendu_" + erreurs + ".jpg";
+    if (erreurs == 9) {
         alert("GAME OVER");
         window.location.reload();
     }
@@ -124,9 +70,8 @@ function letters(lettre, majuscule, minuscule) {
     }
 }
 for (let i = 0; i < alphabet.length; i++) {
-    alphabet[i].addEventListener("click", () => {
-        if (alphabet[i] == alphabet[i]) {
-            letters(alphabet[i], alphabet[i].textContent.toUpperCase(), alphabet[i].textContent.toLowerCase());
-        }
+    let alpha = document.getElementById(alphabet[i]);
+    alpha.addEventListener("click", () => {
+        letters(alpha, alpha.textContent.toUpperCase(), alpha.textContent.toLowerCase());
     });
 }
