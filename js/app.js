@@ -216,3 +216,153 @@ K.addEventListener("click", () => {
         K.style.backgroundColor = "red";
     }
 });
+
+L.addEventListener("click", () => {
+    if (randomWordEclater.includes("L") || randomWordEclater.includes("l")) {
+        L.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        L.style.backgroundColor = "red";
+    }
+});
+
+M.addEventListener("click", () => {
+    if (randomWordEclater.includes("M") || randomWordEclater.includes("m")) {
+        M.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        M.style.backgroundColor = "red";
+    }
+});
+
+N.addEventListener("click", () => {
+    if (randomWordEclater.includes("N") || randomWordEclater.includes("n")) {
+        N.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        N.style.backgroundColor = "red";
+    }
+});
+
+O.addEventListener("click", () => {
+    if (randomWordEclater.includes("O") || randomWordEclater.includes("o")) {
+        O.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        O.style.backgroundColor = "red";
+    }
+});
+
+P.addEventListener("click", () => {
+    if (randomWordEclater.includes("P") || randomWordEclater.includes("p")) {
+        P.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        P.style.backgroundColor = "red";
+    }
+});
+
+Q.addEventListener("click", () => {
+    if (randomWordEclater.includes("Q") || randomWordEclater.includes("q")) {
+        Q.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        Q.style.backgroundColor = "red";
+    }
+});
+
+R.addEventListener("click", () => {
+    if (randomWordEclater.includes("R") || randomWordEclater.includes("r")) {
+        R.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        R.style.backgroundColor = "red";
+    }
+});
+
+S.addEventListener("click", () => {
+    if (randomWordEclater.includes("S") || randomWordEclater.includes("s")) {
+        S.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        S.style.backgroundColor = "red";
+    }
+});
+
+T.addEventListener("click", () => {
+    if (randomWordEclater.includes("T") || randomWordEclater.includes("t")) {
+        T.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        T.style.backgroundColor = "red";
+    }
+});
+
+U.addEventListener("click", () => {
+    if (randomWordEclater.includes("U") || randomWordEclater.includes("u")) {
+        U.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        U.style.backgroundColor = "red";
+    }
+});
+
+V.addEventListener("click", () => {
+    if (randomWordEclater.includes("V") || randomWordEclater.includes("v")) {
+        V.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        V.style.backgroundColor = "red";
+    }
+});
+
+W.addEventListener("click", () => {
+    if (randomWordEclater.includes("W") || randomWordEclater.includes("w")) {
+        W.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        W.style.backgroundColor = "red";
+    }
+});
+
+X.addEventListener("click", () => {
+    if (randomWordEclater.includes("X") || randomWordEclater.includes("x")) {
+        X.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        X.style.backgroundColor = "red";
+    }
+});
+
+Y.addEventListener("click", () => {
+    if (randomWordEclater.includes("Y") || randomWordEclater.includes("y")) {
+        Y.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        Y.style.backgroundColor = "red";
+    }
+});
+
+Z.addEventListener("click", () => {
+    if (randomWordEclater.includes("Z") || randomWordEclater.includes("z")) {
+        Z.style.backgroundColor = "green";
+    } else {
+        counter ++;
+        ordreImg();
+        Z.style.backgroundColor = "red";
+    }
+});
