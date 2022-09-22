@@ -80,8 +80,6 @@ let img9 = "img/pendu_9.jpg";
 
 
 let erreurs = 0;
-let trouver = 0;
-
 function ordreImg() {
     if (erreurs == 1) {
         img.src = img1;
@@ -106,6 +104,7 @@ function ordreImg() {
     }
 }
 
+let trouver = 0;
 function WordFound() {
     if (trouver == randomWordEclater.length) {
         alert("Bien jouer le mot est" + " " + randomWordEclater.join(""));
