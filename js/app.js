@@ -8,6 +8,7 @@ let randomWord = Math.floor(Math.random() * (2578 - 0) + 0);
 let randomWordEclater = word[randomWord].split("");
 console.log(word[randomWord].split(""));
 
+
 let A = document.getElementById("A");
 let B = document.getElementById("B");
 let C = document.getElementById("C");
@@ -34,14 +35,14 @@ let W = document.getElementById("W");
 let X = document.getElementById("X");
 let Y = document.getElementById("Y");
 let Z = document.getElementById("Z");
+let alphabet = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
 
 for (let i = 0; i < randomWordEclater.length; i++) {
     DivSecretWord = document.getElementById("SecretWord");
     newDiv = document.createElement("div");
     newDiv.setAttribute("id", i);
-    DivSecretWord.appendChild(newDiv);                
+    DivSecretWord.appendChild(newDiv);
 }
-
 
 
 let randomNombre = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
@@ -78,291 +79,55 @@ let img9 = "img/pendu_9.jpg";
 
 
 
-let counter = 0;
+let erreurs = 0;
+let trouver = 0;
 
 function ordreImg() {
-    if (counter == 1) {
+    if (erreurs == 1) {
         img.src = img1;
-    } else if (counter == 2) {
+    } else if (erreurs == 2) {
         img.src = img2;
-    } else if (counter == 3) {
+    } else if (erreurs == 3) {
         img.src = img3;
-    } else if (counter == 4) {
+    } else if (erreurs == 4) {
         img.src = img4;
-    } else if (counter == 5) {
+    } else if (erreurs == 5) {
         img.src = img5;
-    } else if (counter == 6) {
+    } else if (erreurs == 6) {
         img.src = img6;
-    } else if (counter == 7) {
+    } else if (erreurs == 7) {
         img.src = img7;
-    } else if (counter == 8) {
+    } else if (erreurs == 8) {
         img.src = img8;
-    } else if (counter == 9) {
+    } else if (erreurs == 9) {
         img.src = img9;
         alert("GAME OVER");
         window.location.reload();
     }
 }
 
+function WordFound() {
+    if (trouver == randomWordEclater.length) {
+        alert("Bien jouer le mot est" + " " + randomWordEclater.join(""));
+        window.location.reload();
+    }
+}
 
-
-
-A.addEventListener("click", () => {
-    if (randomWordEclater.includes("A") || randomWordEclater.includes("a")) {
-        A.style.backgroundColor = "green";
+function letters(lettre, majuscule, minuscule) {
+    if (randomWordEclater.includes(majuscule) || randomWordEclater.includes(minuscule)) {
+        lettre.style.backgroundColor = "green";
+        trouver ++;
+        WordFound();
     } else {
-        counter ++;
+        erreurs ++;
         ordreImg();
-        A.style.backgroundColor = "red";
+        lettre.style.backgroundColor = "red";
     }
-});
-
-B.addEventListener("click", () => {
-    if (randomWordEclater.includes("B") || randomWordEclater.includes("b")) {
-        B.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        B.style.backgroundColor = "red";
-    }
-});
-
-C.addEventListener("click", () => {
-    if (randomWordEclater.includes("C") || randomWordEclater.includes("c")) {
-        C.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();            
-        C.style.backgroundColor = "red";
-    }
-});
-
-D.addEventListener("click", () => {
-    if (randomWordEclater.includes("D") || randomWordEclater.includes("d")) {
-        D.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        D.style.backgroundColor = "red";
-    }
-});
-
-E.addEventListener("click", () => {
-    if (randomWordEclater.includes("E") || randomWordEclater.includes("e")) {
-        E.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        E.style.backgroundColor = "red";
-    }
-});
-
-F.addEventListener("click", () => {
-    if (randomWordEclater.includes("F") || randomWordEclater.includes("f")) {
-        F.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        F.style.backgroundColor = "red";
-    }
-});
-
-G.addEventListener("click", () => {
-    if (randomWordEclater.includes("G") || randomWordEclater.includes("g")) {
-        G.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        G.style.backgroundColor = "red";
-    }
-});
-
-H.addEventListener("click", () => {
-    if (randomWordEclater.includes("H") || randomWordEclater.includes("h")) {
-        H.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        H.style.backgroundColor = "red";
-    }
-});
-
-I.addEventListener("click", () => {
-    if (randomWordEclater.includes("I") || randomWordEclater.includes("i")) {
-        I.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        I.style.backgroundColor = "red";
-    }
-});
-
-J.addEventListener("click", () => {
-    if (randomWordEclater.includes("J") || randomWordEclater.includes("j")) {
-        J.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        J.style.backgroundColor = "red";
-    }
-});
-
-K.addEventListener("click", () => {
-    if (randomWordEclater.includes("K") || randomWordEclater.includes("k")) {
-        K.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        K.style.backgroundColor = "red";
-    }
-});
-
-L.addEventListener("click", () => {
-    if (randomWordEclater.includes("L") || randomWordEclater.includes("l")) {
-        L.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        L.style.backgroundColor = "red";
-    }
-});
-
-M.addEventListener("click", () => {
-    if (randomWordEclater.includes("M") || randomWordEclater.includes("m")) {
-        M.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        M.style.backgroundColor = "red";
-    }
-});
-
-N.addEventListener("click", () => {
-    if (randomWordEclater.includes("N") || randomWordEclater.includes("n")) {
-        N.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        N.style.backgroundColor = "red";
-    }
-});
-
-O.addEventListener("click", () => {
-    if (randomWordEclater.includes("O") || randomWordEclater.includes("o")) {
-        O.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        O.style.backgroundColor = "red";
-    }
-});
-
-P.addEventListener("click", () => {
-    if (randomWordEclater.includes("P") || randomWordEclater.includes("p")) {
-        P.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        P.style.backgroundColor = "red";
-    }
-});
-
-Q.addEventListener("click", () => {
-    if (randomWordEclater.includes("Q") || randomWordEclater.includes("q")) {
-        Q.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        Q.style.backgroundColor = "red";
-    }
-});
-
-R.addEventListener("click", () => {
-    if (randomWordEclater.includes("R") || randomWordEclater.includes("r")) {
-        R.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        R.style.backgroundColor = "red";
-    }
-});
-
-S.addEventListener("click", () => {
-    if (randomWordEclater.includes("S") || randomWordEclater.includes("s")) {
-        S.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        S.style.backgroundColor = "red";
-    }
-});
-
-T.addEventListener("click", () => {
-    if (randomWordEclater.includes("T") || randomWordEclater.includes("t")) {
-        T.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        T.style.backgroundColor = "red";
-    }
-});
-
-U.addEventListener("click", () => {
-    if (randomWordEclater.includes("U") || randomWordEclater.includes("u")) {
-        U.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        U.style.backgroundColor = "red";
-    }
-});
-
-V.addEventListener("click", () => {
-    if (randomWordEclater.includes("V") || randomWordEclater.includes("v")) {
-        V.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        V.style.backgroundColor = "red";
-    }
-});
-
-W.addEventListener("click", () => {
-    if (randomWordEclater.includes("W") || randomWordEclater.includes("w")) {
-        W.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        W.style.backgroundColor = "red";
-    }
-});
-
-X.addEventListener("click", () => {
-    if (randomWordEclater.includes("X") || randomWordEclater.includes("x")) {
-        X.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        X.style.backgroundColor = "red";
-    }
-});
-
-Y.addEventListener("click", () => {
-    if (randomWordEclater.includes("Y") || randomWordEclater.includes("y")) {
-        Y.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        Y.style.backgroundColor = "red";
-    }
-});
-
-Z.addEventListener("click", () => {
-    if (randomWordEclater.includes("Z") || randomWordEclater.includes("z")) {
-        Z.style.backgroundColor = "green";
-    } else {
-        counter ++;
-        ordreImg();
-        Z.style.backgroundColor = "red";
-    }
-});
+}
+for (let i = 0; i < alphabet.length; i++) {
+    alphabet[i].addEventListener("click", () => {
+        if (alphabet[i] == alphabet[i]) {
+            letters(alphabet[i], alphabet[i].textContent.toUpperCase(), alphabet[i].textContent.toLowerCase());
+        }
+    });
+}
