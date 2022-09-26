@@ -2,7 +2,7 @@ let word = ["Aaliyah","Aaron","Abby","Abd","Abdallah","Abdel","Abdelaziz","Abdel
 // il y a 2578 mots
 
 
-let DivSecretWord ;//= document.getElementById("SecretWord");
+let DivSecretWord;//= document.getElementById("SecretWord");
 let newDiv = document.createElement("div");
 let randomWord = Math.floor(Math.random() * (2578 - 0) + 0);
 let randomWordEclater = word[randomWord].normalize("NFD").replace(/[\u0300-\u036f]/g, "").split("");
@@ -16,22 +16,22 @@ for (let i = 0; i < randomWordEclater.length; i++) {
     DivSecretWord = document.getElementById("SecretWord");
     newDiv = document.createElement("div");
     newDiv.setAttribute("id", i);
+    newDiv.textContent = randomWordEclater[i];
     DivSecretWord.appendChild(newDiv);
 }
 
 
 let randomNombre = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
 let randomDiv = document.getElementById(randomNombre);
-randomDiv.textContent = randomWordEclater[randomNombre];
+randomDiv.style.color = "#1EE193";
 
 let randomNombre2 = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
-randomDiv = document.getElementById(randomNombre2);
-randomDiv.textContent = randomWordEclater[randomNombre2];
+let randomDiv2 = document.getElementById(randomNombre2);
+randomDiv2.style.color = "#1EE193";
 
 let randomNombre3 = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
-randomDiv = document.getElementById(randomNombre3);
-randomDiv.textContent = randomWordEclater[randomNombre3];
-
+let randomDiv3 = document.getElementById(randomNombre3);
+randomDiv3.style.color = "#1EE193";
 
 
 let restart = document.getElementById("restart");
@@ -51,9 +51,8 @@ function ordreImg() {
     }
 }
 
-let trouver = 0;
 function WordFound() {
-    if (trouver == randomWordEclater.length) {
+    if (randomDiv.style.color == "black" && randomDiv2.style.color == "black" && randomDiv3.style.color == "black") {
         alert("Bien jouer le mot est" + " " + randomWordEclater.join(""));
         window.location.reload();
     }
@@ -62,7 +61,15 @@ function WordFound() {
 function letters(lettre, majuscule, minuscule) {
     if (randomWordEclater.includes(majuscule) || randomWordEclater.includes(minuscule)) {
         lettre.style.backgroundColor = "green";
-        trouver ++;
+        if (randomDiv.textContent == minuscule || randomDiv.textContent == majuscule) {
+            randomDiv.style.color = "black";
+        }
+        if (randomDiv2.textContent == minuscule || randomDiv2.textContent == majuscule) {
+            randomDiv2.style.color = "black";
+        }
+        if (randomDiv3.textContent == minuscule || randomDiv3.textContent == majuscule) {
+            randomDiv3.style.color = "black";
+        }
         WordFound();
     } else {
         erreurs ++;
