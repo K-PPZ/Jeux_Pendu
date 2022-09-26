@@ -54,7 +54,6 @@ function ordreImg() {
 function WordFound() {
     if (randomDiv.style.color == "black" && randomDiv2.style.color == "black" && randomDiv3.style.color == "black") {
         alert("Bien jouer le mot est" + " " + randomWordEclater.join(""));
-        window.location.reload();
     }
 }
 
