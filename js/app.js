@@ -17,21 +17,9 @@ for (let i = 0; i < randomWordEclater.length; i++) {
     newDiv = document.createElement("div");
     newDiv.setAttribute("id", i);
     newDiv.textContent = randomWordEclater[i];
+    newDiv.style.color = "#1EE193";
     DivSecretWord.appendChild(newDiv);
 }
-
-
-let randomNombre = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
-let randomDiv = document.getElementById(randomNombre);
-randomDiv.style.color = "#1EE193";
-
-let randomNombre2 = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
-let randomDiv2 = document.getElementById(randomNombre2);
-randomDiv2.style.color = "#1EE193";
-
-let randomNombre3 = Math.floor(Math.random() * (randomWordEclater.length - 0) + 0);
-let randomDiv3 = document.getElementById(randomNombre3);
-randomDiv3.style.color = "#1EE193";
 
 
 let restart = document.getElementById("restart");
@@ -51,25 +39,19 @@ function ordreImg() {
     }
 }
 
-function WordFound() {
-    if (randomDiv.style.color == "black" && randomDiv2.style.color == "black" && randomDiv3.style.color == "black") {
-        alert("Bien jouer le mot est" + " " + randomWordEclater.join(""));
-    }
-}
+// function WordFound() {
+//     if (newDiv.style.color == "black") {
+//         alert("Bien jouer le mot est" + " " + randomWordEclater.join(""));
+//     }
+// }
 
 function letters(lettre, majuscule, minuscule) {
     if (randomWordEclater.includes(majuscule) || randomWordEclater.includes(minuscule)) {
         lettre.style.backgroundColor = "green";
-        if (randomDiv.textContent == minuscule || randomDiv.textContent == majuscule) {
-            randomDiv.style.color = "black";
+        if (newDiv.textContent == minuscule || newDiv.textContent == majuscule) {
+            newDiv.style.color = "black";
         }
-        if (randomDiv2.textContent == minuscule || randomDiv2.textContent == majuscule) {
-            randomDiv2.style.color = "black";
-        }
-        if (randomDiv3.textContent == minuscule || randomDiv3.textContent == majuscule) {
-            randomDiv3.style.color = "black";
-        }
-        WordFound();
+        //WordFound();
     } else {
         erreurs ++;
         ordreImg();
